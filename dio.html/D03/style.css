@@ -1,0 +1,147 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.anchors > ul, .lista {
+    list-style: none;
+    padding-left: 5px;
+    margin-top: 0;
+    padding-top: 10%;
+    line-height: 1.5em;
+}
+
+a {
+    color:blue;
+    text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+abbr{
+    text-decoration: none;
+}
+
+abbr > a {
+    color: #000;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    width: 280px;
+}
+
+a > h1 {
+    margin-left: 5%;
+}
+
+figure {
+    text-align: center;
+}
+
+.bar {
+    background-color: #f9f9fb;
+    padding:15px;
+    border-top: solid 1px #cdcdcd;
+    border-bottom: solid 1px #cdcdcd;
+}
+.content {
+    max-width: 1440px;
+    margin: auto;
+    grid-gap: 3rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.footer {
+    min-height: 100px;
+    border-top: solid 1px #cdcdcd;
+}
+.anchors {
+    border-left: solid 1px #cdcdcd;
+    padding-left: 15px;
+}
+
+#display {
+    position: sticky;
+    top: 0;
+}
+.links {
+    padding: 5%;
+}
+.sidebar {
+    border-right: solid 1px #cdcdcd;
+}
+
+.sidebar > ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* NAV */
+
+.lista-1 > h2 > a {
+    color: black;
+    padding-bottom: 10%;
+    display:inline-block;
+}
+
+.lista-1 > ul {
+    padding: 0;
+    line-height: 1.5em;
+}
+
+.lista-1:hover .lista-2 {
+    display: block;
+}
+
+.lista-2 {
+    position: absolute;
+    width: 200px;
+    display: none;
+}
+
+.lista-2 > li {
+    padding: 3px 10px;
+}
+
+.lista-link {
+    display: block;
+}
+
+.link {
+    display:block;
+}
+
+.lista-link:hover {
+    background: #7846686b;
+}
+
+/* index */
+
+.minha-foto {
+    float: right;
+    width: 200px;
+    height: 220px;
+    padding: 20px;
+    background-color: #784668;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: #000 0px 0px 3px 0px;
+}
+
+.img-index {
+    background-image: linear-gradient(to right,#26342C, #272528, #3C112E, #52173D);
+}
+
+.img-index > figcaption {
+    height: 30px;
+    padding: 5px;
+    color: #fff;
+}
