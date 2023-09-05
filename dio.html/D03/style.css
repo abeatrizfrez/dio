@@ -32,10 +32,12 @@ abbr > a {
     align-items: center;
     padding: 15px;
     width: 280px;
+    font-size: 2em;
+    font-weight: bold;
 }
 
-a > h1 {
-    margin-left: 5%;
+picture {
+    margin-right: 5%;
 }
 
 figure {
