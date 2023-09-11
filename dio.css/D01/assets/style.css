@@ -1,0 +1,200 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap');
+
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*-- HEADER ---*/
+
+.banner {
+    background: url(images/banner.png), linear-gradient(180deg, #00000099, #31a8dd33, #00000099) center / cover no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+    height: 605px;
+    padding-top: 56px;
+    border-bottom: 1px solid #33A8DB;
+}
+
+.banner-content {
+    width: 510px;
+    height: 393px;
+    margin: auto;
+}
+
+/*-- IMG ---*/
+
+.logo {
+    width: 268px;
+    height: 268px;
+    margin:  0 auto;
+    border-radius: 50%;
+    background: #00000033;
+    box-sizing: border-box;
+}
+
+.logo img {
+    margin: 27px 10px;
+}
+
+/*-- TEXTOS ---*/
+
+.banner-content h1 {
+    width: 437px;
+    margin: 16px auto;
+    text-transform: uppercase;
+    background-image: linear-gradient(#33A8DB, #1472B7);
+    background-clip: text; -webkit-background-clip: text;
+    color: transparent;
+    font: normal 900 min(6vw, 40px) / 46.96px 'Raleway';
+}
+
+.banner-content p {
+    color: #fff;
+    margin: auto;
+    font: normal 400 min(3vw, 20px) / 23.48px 'Raleway';
+}
+
+/*-- BOTAO ---*/
+
+.banner-content button {
+    width: 23,97vw;
+    height: 57px;
+    margin-top: 24px;
+    padding: 19px 42px;
+    text-transform: uppercase;
+    letter-spacing: 0.21em;
+    font: normal 900 min(2.5vw,16px) / 18.78px 'Raleway';
+    color: #31A8DD;
+    background-color: transparent;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to top, #1572b7, #3ba1cd);
+}
+
+/*-- MAIN ---*/
+
+#course-content {
+    width: 58.2vw;
+    height: (53.1vh, 325px);
+    margin: min(11%, 118px) auto min(9%, 90px) auto;
+}
+
+/*-- TEXTOS ---*/
+
+#course-content h2 {
+    margin: auto;
+    color: #33A8DB;
+    text-transform: uppercase;
+    letter-spacing: 0.19em;
+    font: normal 700 min(5vw, 32px) / 37.57px 'Raleway';
+}
+
+#course-content p {
+    color: #fff;
+    margin-top: min(3.9vh, 24px);
+    font: normal 400 min(2.5vw,16px) / 18.78px 'Raleway';
+}
+
+/*-- CONTAINER ---*/
+
+.module {
+    width: min(39.3vw, 535px);
+    padding: min(2.5vw,16px) 0;
+    margin: min(3.9vh, 24px) auto;
+    color: #fff;
+    background-color: #252525;
+    border-radius: 57px;
+    box-sizing: border-box;
+    border: 1px solid #33A8DB;
+    box-shadow: inset -2px 6px 4px 0px #00000066;
+    font: normal 400 16px / 18.78px 'Raleway';
+}
+
+.module span {
+    color: #33A8DB;
+}
+
+/*-- CONTAINER 2 ---*/
+
+#transform-world {
+    height: min(59.4vh, 363px);
+    background: url(images/woman-code.png) center / cover no-repeat;
+    background-attachment: fixed;
+    border-top: 1px solid #33A8DB;
+    border-bottom: 1px solid #33A8DB;
+    display: flex;
+    align-items: center;
+}
+
+#transform-world p {
+    width: 244px;
+    margin-left: 14.8%;
+    text-align: left;
+    text-transform: lowercase;
+    text-shadow: 3px 2px 0px #33A8DB;
+    font: normal 900 40px / 46.96px 'Raleway';
+}
+
+/*-- CONTAINER 3 ---*/
+
+#professional-challenges {
+    margin-top: 7.2%;
+    margin-bottom: 8.6%;
+}
+
+/*-- IMG ---*/
+
+#professional-challenges img {
+    margin: 3% auto 3% auto;
+    max-width: 100%;
+}
+
+/*-- TEXTOS ---*/
+
+#professional-challenges h2 {
+    width: min(55.4vw, 754px);
+    margin: auto;
+    color: #33A8DB;
+    text-transform: uppercase;
+    letter-spacing: 0.19em;
+    font: normal 700 min(5vw, 32px) / 37.57px 'Raleway';
+}
+
+#professional-challenges p {
+    width: min(58.2vw,792px);
+    margin: auto;
+    font: normal 400 min(2.5vw, 16px) / 18.78px 'Raleway';
+}
+
+/*-- FOOTER ---*/
+
+footer {
+    height: min(27.8vh, 170px);
+    box-sizing: border-box;
+    border-top: 1px solid #33A8DB;
+    background: linear-gradient(to bottom, #33A8DB00, #33A8DB33);
+}
+
+footer img {
+    padding-top: 48.65px;
+    padding-bottom: 1%;
+}
+
+
+footer p {
+    color: #fff;
+    font: normal 400 min(2.5vw, 16px) / 18.78px 'Raleway';
+}
+
+footer a {
+    text-decoration: none;
+    color: #33A8DB;
+    font: normal 700 min(2.5vw, 16px) / 18.78px 'Raleway';
+}
