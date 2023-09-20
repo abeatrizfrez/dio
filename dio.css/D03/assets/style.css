@@ -1,0 +1,125 @@
+@import url('reset.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    display: grid;
+    grid-template: "header header" auto "sidebar main" auto / 218px 1fr;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;    
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+header {
+    grid-area: header;
+    display: inline-grid;
+    grid-template: "left center right" auto / 146px 404px 130px; 
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 24px;
+}
+
+.left-header {
+    grid-area: left;
+    display: inline-grid;
+    grid: 1fr / repeat(2, 1fr);
+    gap: 32px;
+    place-items: center;
+}
+
+/* CENTER HEADER */
+
+.center-header {
+    grid-area: center;
+    display: inline-grid;
+    grid: 1fr / repeat(2, 1fr);
+    align-items: center;
+}
+
+.pesquisa-center-header {
+    box-sizing: border-box;
+    width: 348px;
+    height: 40px;
+    padding-left: 5px;
+    justify-self: end;
+    border: 1px solid #CCCCCC;
+}
+
+.button-center-header {
+    width: 57px;
+    height: 40px;
+    border: 1px solid #CCCCCC;
+    background-color: #F8F8F8;
+}
+
+.right-header {
+    grid-area: right;
+    display: inline-grid;
+    grid: 1fr / repeat(3, 1fr);
+    place-items: center ;
+    gap: 24px;
+}
+
+aside {
+    grid-area: sidebar;
+    display: grid;
+    grid: repeat(10, 24px) / auto;
+    gap: 22px;
+    padding: 24px;
+}
+
+.navegacao-aside {
+    display: inline-grid;
+    grid: auto / auto 1fr;
+    place-items: center start;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+main {
+    grid-area: main;
+    display: inline-grid;
+    grid: repeat(3, 262px) / repeat(4, 282px);
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.video-main {
+    display: inline-grid;
+    grid: repeat(2, auto) / auto;
+    gap: 16px;
+    padding: 16px;
+    width: 250px;
+}
+
+.detalhes-video-main {
+    display: inline-grid;
+    justify-content: start;
+    grid: auto / repeat(2, auto);
+    gap: 10px;
+}
+
+.texto-video-main {
+    display: grid;
+    grid: repeat(2, auto) / auto;
+}
+
+.texto-video-main h2 {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.texto-video-main p {
+    white-space: pre-line;
+    font-size: 12px;
+    line-height: 14px;
+    color: #515151;
+}
