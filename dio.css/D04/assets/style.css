@@ -21,17 +21,37 @@ body {
 .button-header-baixar, .button-header-abrir {
     border: none;
     border-radius: 28px;
+    cursor: pointer;
 }
 
 .button-header-baixar {
-    color: #000000;
     background-color: #FFFFFF;
 }
 
+.button-header-baixar:hover {
+    background-color: #dfdfdf;
+}
+
 .button-header-abrir {
-    color: #FFFFFF;
     background-color: #23272A;
 }
+
+.button-header-abrir:hover {
+    background-color: #363b3f;
+}
+
+a {
+    text-decoration: none;
+}
+
+.link-baixar-header {
+    color: #000000;
+}
+
+.link-abrir-header {
+    color: #FFFFFF;
+}
+
 
 footer {
     background-color: #23272A;
