@@ -1,0 +1,773 @@
+@import url('reset.css');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+@keyframes bg-gradient { 
+    from {
+        background-position: 0% 50%;;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes btt-header-animation {
+    0%, 10% {
+        transform: rotate(0);
+    }
+    15% {
+        transform: rotate(-15deg);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    30% {
+        transform: rotate(10deg);
+    }
+    35% {
+        transform: rotate(-10deg);
+    }
+    40%, 100% {
+        transform: rotate(0);
+    }
+}
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+        45deg,
+        #9b34ef 0%,
+        #490cb0 20%,
+        transparent 50%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+        90deg,
+        #5516ba,
+        rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+                                                /* BODY */
+
+body {
+    background-color: #020228;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-right: 25px;
+}
+
+/* BOTOES */
+
+.button {
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 500px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    background-color: var(--tertiary-color);
+    color: #fff;
+}
+.header__button {
+    animation: btt-header-animation 2s linear infinite;
+}
+
+.header__button, .button--gradient {
+    background: var(--btn-bg-color-gradient);
+    background-size: 250%;
+    padding: 10px 15px;
+    transition: border 1s;
+}
+
+.menu__item--button, .button--gradient {
+    background-color: var(--tertiary-color);
+    padding: 10px 27px;
+    transition: background-color 1s ease, color 1s linear;
+} .menu__item--button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.button--gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+} .button--gradient:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* CARDS PLANOS */
+
+.subscription__plans {
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.subscription__card{
+    transition: transform 1s ease-in-out;
+}
+
+.subscription__plans:has(.subscription__card:nth-child(1):hover)
+.subscription__card:nth-child(2) {
+    transform: rotateY(-45deg);
+}
+
+.subscription__plans:has(.subscription__card:nth-child(2):hover)
+.subscription__card:nth-child(1) {
+    transform: rotateY(45deg);
+}
+
+/* CARDS */
+
+.contents__card:hover .contents__image {
+    opacity: 0;
+}
+
+.contents__card {
+    outline: 3px solid transparent;
+    border-radius: 10px;
+    transition: background-image 2s, outline 1s, transform 1s;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contents__card:hover {
+    border-radius: 10px;
+    transform: scale(1.06);
+}
+
+.contents__image {
+    transition: opacity 2s;
+}
+
+.contents__card:nth-child(1):hover {
+    background-image: url("/assets/images/hbo-hover_0.webp");
+}
+
+.contents__card:nth-child(2):hover {
+    background-image: url("/assets/images/MAX-Hover.webp");
+}
+
+.contents__card:nth-child(3):hover {
+    background-image: url("/assets/images/DC-Hover.webp");
+}
+
+.contents__card:nth-child(4):hover {
+    background-image: url("/assets/images/WB-Hover.webp");
+}
+
+.contents__card:nth-child(5):hover {
+    background-image: url("/assets/images/CN-Hover.png");
+}
+
+.contents__card:nth-child(6):hover {
+    background-image: url("/assets/images/UCL-Hover.webp");
+}
+
+                                                /* HEADER */
+
+.header {
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    animation: bg-gradient 10s ease-in-out 1s infinite alternate-reverse;
+    background-size: 500%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} .header::after {
+    content: "";
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(transparent, #020228);
+}
+
+.header__channels {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header__channel {
+    width: auto;
+}
+
+.offer p:first-of-type {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.divider {
+    background: var(--divider-bg-color);
+    width: 65%;
+    height: 5px;
+}
+
+
+                                                /* MAIN */
+
+.menu {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu__item {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu__logo-image {
+    width: 160px;
+}
+
+.subscription {
+    background-image: url(/assets/images/background-movies-series.png);
+    background-position: center left;
+    background-size: 250%;
+    background-repeat: no-repeat;
+}
+
+.subscription__plans {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.subscription__card {
+    background: var(--card-bg-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    justify-content: space-between;
+    height: 600px;
+}
+
+.subscription__price {
+    color: var(--secondary-color);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.text--small {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.subscription__description::marker {
+    content: '+';
+    font-size: 2rem;
+}
+
+/* FOOTER */
+
+.footer div a {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer__link {
+    font-weight: bold;
+    color: var(--link-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.footer__link:hover {
+    color: #fff;
+    transition: 1s;
+}
+
+.footer__legal {
+    font-size: 0.7rem;
+    color: var(--link-color);
+    width: 100vh;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+                                                            /* X-Small devices (portrait phones, less than 481px) */
+@media (max-width: 480px) { 
+
+    /* BODY */
+
+    .menu {
+        flex-direction: column;
+        gap: 25px;
+        padding: 40px 25px;
+    }
+
+    .menu__logo-image {
+        width: 120px;
+    }
+
+    .menu__item {
+        font-size: 0.9rem;
+    }
+
+    nav div {
+        padding: 0;
+    }
+
+    /* HEADER */
+
+    .header {
+        margin-top: 160px;
+        padding-top: 100px;
+    }
+
+    .header__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 0 15px;
+    }
+
+    .header__channels {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 30px;
+        gap: 20px;
+    }
+
+    .header__title {
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        line-height: 50px;
+    }
+
+    .header__title span {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 40px;
+    }
+
+    .header__title {
+        font-size: 3rem;
+    }
+
+    .offer {
+        text-align: center;
+    }
+
+    .offer p:first-of-type, .offer__price--small {
+        font-size: 1.3rem;
+    }
+
+    .offer__price {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .offer__price--small {
+        font-weight: lighter;
+    }
+
+    .header__button {
+        font-size: 1rem;
+        padding: 20px 40px;
+    }
+
+    .text--small {
+        text-align: center;
+        font-family: 'Quicksand';
+        font-weight: lighter;
+        max-width: 300px;
+        line-height: 20px;
+    }
+
+    /* MAIN */
+
+    .container {
+        padding: 0 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+        max-width: 400px;
+        line-height: 38px;
+    }
+
+    .subscription__plan {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 35px;
+    }
+
+    .subscription__plans {
+        margin-top: 40px;
+    }
+
+    .subscription__plan h3 {
+        font-size: 1.5rem;
+    }
+
+    .subscription__goals, .subscription__card ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .subscription__description{
+        padding-left: 10px;
+    }
+
+    .contents {
+        margin-top: 170px;
+        padding: 30px;
+    }
+
+    .contents h2 {
+        margin-bottom: 50px;
+    }
+
+    .contents__card {
+        text-align: center;
+    }
+
+    .contents__image {
+        width: 95%;
+    }
+
+    .contents__container {
+        display: grid;
+        grid-template-columns: repeat(6, 100%);
+        grid-template-rows: 600px;
+        gap: 30px;
+        overflow: auto hidden;
+        max-width: 500px;
+    }
+
+    .subscription__card .button--gradient {
+        padding: 18px 50px;
+    }
+
+}
+
+
+                                                                /* Small devices (landscape phones, 481px and up) */
+@media (min-width: 481px) { 
+
+    .menu {
+
+        flex-direction: row;
+        gap: 25px;
+        padding: 10px 35px 10px 15px;
+    }
+
+    .menu__logo-image {
+        width: 160px;
+    }
+
+    .menu__item {
+        font-size: 0.8rem;
+    }
+
+    nav div {
+        padding: 0;
+    }
+
+    /* HEADER */
+
+    .header {
+        margin-top: 50px;
+        padding-top: 100px;
+    }
+
+    .header__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 0 15px;
+    }
+
+    .header__channels {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 30px;
+        gap: 20px;
+    }
+
+    .header__title {
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        line-height: 50px;
+    }
+
+    .header__title span {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 40px;
+    }
+
+    .header__title {
+        font-size: 3rem;
+    }
+
+    .offer {
+        text-align: center;
+    }
+
+    .offer p:first-of-type, .offer__price--small {
+        font-size: 1.3rem;
+    }
+
+    .offer__price {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .offer__price--small {
+        font-weight: lighter;
+    }
+
+    .header__button {
+        font-size: 1rem;
+        padding: 20px 40px;
+    }
+
+    .text--small {
+        text-align: center;
+        font-family: 'Quicksand';
+        font-weight: lighter;
+        max-width: 300px;
+        line-height: 20px;
+    }
+
+    /* MAIN */
+
+    .container {
+        padding: 0 25px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 38px;
+    }
+
+    .subscription__plans {
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .subscription__card {
+        box-sizing: border-box;
+        max-width: 530px;
+        padding: 60px;
+    }
+
+    .subscription__plan {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .subscription__plan h3 {
+        font-size: 1.5rem;
+    }
+
+    .subscription__goals, .subscription__card ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .subscription__description{
+        padding-left: 10px;
+        font-size: 1.2rem;
+    }
+
+    .subscription__price {
+        font-size: 2rem;
+    }
+
+    .contents {
+        margin-top: 170px;
+        padding: 30px;
+    }
+
+    .contents h2 {
+        margin-bottom: 50px;
+    }
+
+    .contents__image {
+        width: 100%;
+    }
+
+    .contents__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 30px;
+    }
+
+    .footer div:first-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 25px;
+        line-height: 3px;
+        margin-bottom: 10px;
+    }
+
+    .footer .text--small {
+        max-width: 1200px;
+    }
+
+    .subscription__card .button--gradient {
+        padding: 18px 59px;
+    }
+
+}
+
+                                                                    /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+    .contents__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer {
+        margin-top: 100px;
+    }
+
+}
+
+                                                                    /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+    .footer__social {
+        margin-top: 60px;
+    }
+
+}
+
+                                                                /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+    .container, footer {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    main {
+        margin-top: 70px;
+    }
+
+    .subscription__plans {
+        gap: 80px;
+    }
+
+    .contents {
+        margin-top: 170px;
+    }
+
+    .contents__container {
+        gap: 40px;
+    }
+
+    .subscription {
+        background-image: url(/assets/images/background-movies-series.png);
+        background-position: center left;
+        background-size: 140%;
+        background-repeat: no-repeat;
+    }
+    
+}
